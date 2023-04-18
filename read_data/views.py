@@ -1,6 +1,7 @@
 import csv
 
 from django.contrib import messages
+from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 import requests
 from django.http import HttpResponse
@@ -110,3 +111,22 @@ def read_movies(request):
         messages.error(request, 'insert data failed! please try again', 'danger')
 
     return redirect('index')
+
+
+def movies(request):
+    request.session['counter'] = 20
+    query_set = Movie.objects.all().order_by('-rank')
+
+    if query_set:
+        paginator = Paginator(query_set, 20)
+        page_number = request.GET.get('page')
+
+        page_obj = paginator.get_page(page_number)
+    else:
+        page_obj = None
+
+    context = {
+        'list': page_obj,
+    }
+
+    return render(request, 'read_data/all_movies.html', context)
