@@ -1,6 +1,6 @@
 from django.db import models
 
-class Moive(models.Model):
+class Movie(models.Model):
 
     title = models.CharField(max_length=150)
     rank  = models.DecimalField(max_digits=3, decimal_places=1)
