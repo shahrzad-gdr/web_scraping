@@ -88,3 +88,25 @@ def extract_data(request):
 
     return redirect('index')
 
+
+
+
+def read_movies(request):
+    try:
+        with open('data.csv') as f:
+            reader = csv.reader(f, delimiter='\t')
+
+            for item in reader:
+                Movie.objects.create(
+                    title=item[0],
+                    year=item[1],
+                    rank=item[2],
+                    director=item[3],
+                    poster=item[4],
+                    link=item[5],
+                )
+            messages.success(request, 'insert data successfully', 'success')
+    except:
+        messages.error(request, 'insert data failed! please try again', 'danger')
+
+        return redirect('index')
