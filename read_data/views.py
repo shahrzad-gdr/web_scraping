@@ -74,3 +74,17 @@ def data(url):
 
 def home(request):
     return render(request, 'read_data/index.html')
+
+
+
+
+def extract_data(request):
+    try :
+        data('https://www.imdb.com/chart/top/')
+        messages.success(request, 'extract data successfully', 'success')
+
+    except:
+        messages.error(request, 'extract failed! please try again', 'danger')
+
+    return redirect('index')
+
