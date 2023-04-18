@@ -1,0 +1,71 @@
+{% extends 'read_data/__temp.html' %}
+
+{% block title %}
+    all movies
+{% endblock %}
+
+
+{% block content %}
+    <div class="container mt-3">
+        <h2>Top 250 Movies</h2>
+        <table class="table table-striped">
+
+            <thead>
+              <tr>
+                <th>row</th>
+                <th>Poster</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Director</th>
+                <th>Rate</th>
+                <th>Show More</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for item in list %}
+                    <tr>
+                        <td>{{ item.id }} </td>
+                        <td>
+                            <a href="{{ item.link }}" target="_blank">
+                                <img src="{{ item.poster }}" alt="{{ item.title }}">
+                            </a>
+                        </td>
+                        <td>{{ item.title }} </td>
+                        <td>{{ item.year }} </td>
+                        <td>{{ item.director }}</td>
+                        <td>{{ item.rank }}</td>
+                        <td>
+                            <a href="{{ item.link }}" class="btn btn-primary" target="_blank">visit</a>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+    </div>
+
+    <br>
+    <div class="row" style="margin-bottom: 2%">
+        <span >
+            {% if list.has_previous %}
+                <a href="?page=1" class="btn btn-outline-info">1</a>
+                <a href="?page={{ list.previous_page_number }}" class="btn btn-outline-warning">previous</a>
+            {% endif %}
+
+            <span >
+                page
+                 {{ list.number }}
+                to
+                {{ list.paginator.num_pages }}
+            </span>
+
+            {% if list.has_next %}
+                <a href="?page={{ list.next_page_number }}" class="btn btn-outline-warning">next </a>
+                <a href="?page={{ list.paginator.num_pages }}" class="btn btn-outline-info">{{ list.paginator.num_pages }}</a>
+            {% endif %}
+        </span>
+    </div>
+
+{% endblock %}
