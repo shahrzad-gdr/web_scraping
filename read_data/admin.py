@@ -2,6 +2,6 @@ from django.contrib import admin
 
 
 
-from read_data.models import Moive
+from read_data.models import Movie
 
-admin.site.register(Moive)
+admin.site.register(Movie)
