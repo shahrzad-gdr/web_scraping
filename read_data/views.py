@@ -109,4 +109,4 @@ def read_movies(request):
     except:
         messages.error(request, 'insert data failed! please try again', 'danger')
 
-        return redirect('index')
+    return redirect('index')
