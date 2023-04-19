@@ -28,6 +28,8 @@ read_data -> templates -> read_data ->
 to call the 'home' view.
 14.  We added three links on the homepage for extracting data from the website, inserting data into the database, and displaying the
 stored data using a query.
+<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(1).png" alt="image1" >
+
 15.  We created a new function in '[views.py](https://github.com/shahrzad-gdr/web_scraping/blob/master/read_data/views.py)'
 called 'extract_data' to extract data from
 '[https://www.imdb.com/chart/top/](https://www.imdb.com/chart/top/)'
@@ -47,17 +49,18 @@ to call the 'read_movies' view.
 '[all_movies.html](https://github.com/shahrzad-gdr/web_scraping/blob/master/read_data/templates/read_data/all_movies.html)'.
 22.  To avoid displaying 250 records of data in a single page, we used the Django built-in library 'Paginator' to show 20 records on
 each page.
+<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(2).png" alt="image2" >
+
 23.  We added a new path to 'urlpatterns' in '[urls.py](https://github.com/shahrzad-gdr/web_scraping/blob/master/read_data/urls.py)'
 to call the 'movies' view.
 24.  We added a table to '[all_movies.html](https://github.com/shahrzad-gdr/web_scraping/blob/master/read_data/templates/read_data/all_movies.html)'
 using Django syntax such as {% for item in list %} loop and {{
 item.title }}.
+<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(4).png" alt="image4" >
+
 25.  Finally, by clicking on each movie's poster, the user is redirected to the detailed information of that specific movie on the
 IMDB website."
+<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(3).png" alt="image3" >
 
 
 There are some screenshots of project: 
-<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(1).png" alt="image1" >
-<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(2).png" alt="image2" >
-<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(3).png" alt="image3" >
-<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(4).png" alt="image4" >
