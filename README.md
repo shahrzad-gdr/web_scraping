@@ -56,4 +56,8 @@ item.title }}.
 IMDB website."
 
 
+There are some screenshots of project: 
 <img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(1).png" alt="image1" >
+<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(2).png" alt="image2" >
+<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(3).png" alt="image3" >
+<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(4).png" alt="image4" >
