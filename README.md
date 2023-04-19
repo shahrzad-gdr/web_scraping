@@ -56,5 +56,4 @@ item.title }}.
 IMDB website."
 
 
-
-https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(1).png
+<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(1).png" alt="image1" >
