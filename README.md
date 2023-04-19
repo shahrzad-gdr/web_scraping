@@ -49,7 +49,7 @@ to call the 'read_movies' view.
 '[all_movies.html](https://github.com/shahrzad-gdr/web_scraping/blob/master/read_data/templates/read_data/all_movies.html)'.
 22.  To avoid displaying 250 records of data in a single page, we used the Django built-in library 'Paginator' to show 20 records on
 each page.
-<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(2).png" alt="image2" >
+<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(3).png" alt="image3" >
 
 23.  We added a new path to 'urlpatterns' in '[urls.py](https://github.com/shahrzad-gdr/web_scraping/blob/master/read_data/urls.py)'
 to call the 'movies' view.
@@ -60,7 +60,6 @@ item.title }}.
 
 25.  Finally, by clicking on each movie's poster, the user is redirected to the detailed information of that specific movie on the
 IMDB website."
-<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(3).png" alt="image3" >
+<img src="https://raw.githubusercontent.com/shahrzad-gdr/web_scraping/master/images/WebScraping%20(2).png" alt="image2" >
 
 
-There are some screenshots of project: 
